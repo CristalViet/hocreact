@@ -1,10 +1,18 @@
 import React from 'react';
+import UserInfor from './UserInfor';
 
-class MyComponent extends React.Component{
+class MyComponent extends React.Component {
+
+    
+
     //JSX
     render(){
         return(
-            <div>My first Component</div>
+        <div>
+        
+
+        <UserInfor/>
+        </div>
 
         );
     }
