@@ -1,6 +1,8 @@
 import React from 'react';
-import UserInfor from './UserInfor';
+import AddUserInfor from './AddUserInfor'
 import DisplayInfor from './DisplayInfor';
+
+
 
 class MyComponent extends React.Component {
 
@@ -13,6 +15,15 @@ class MyComponent extends React.Component {
 
         ]
     }
+    handleAddNewUser = (objectUser)=>{
+        let listUsersClone = [...this.state.listUsers];
+        
+        // console.log(objectUser);
+        // this.setState({
+        //     listUsers:[objectUser,...this.state.listUsers]
+
+        // })
+    };
 
     //JSX
     render(){
@@ -21,7 +32,7 @@ class MyComponent extends React.Component {
         <div>
         
 
-        <UserInfor/>
+        <AddUserInfor handleAddNewUser={this.handleAddNewUser}/>
         <DisplayInfor listUsers={this.state.listUsers}></DisplayInfor>
         <hr/>
         
