@@ -32,8 +32,8 @@ class AddUserInfor extends React.Component{
         this.props.handleAddNewUser(
             {
             id: Math.floor((Math.random()*100)+1)+'-random',
-            name:'eric',
-            age: '26'
+            name:this.state.name,
+            age: this.state.age
 
             }
 
@@ -44,15 +44,15 @@ class AddUserInfor extends React.Component{
             <>
              My name is {this.state.name} and I'm {this.state.age}
 
-<form onSubmit={(event)=>this.handleOnSumbit(event)}>
-<label>Your name</label>
-<input type="text" value={this.state.name}  onChange={(event)=>this.handleOnChangeInput(event)}/>
-<label>Your age: </label>
-<input type="text" value={this.state.age}  onChange={(event)=>this.handleOnChangeAge(event)}/>
-    <button>
-        submit
-    </button>
-    </form>
+            <form onSubmit={(event)=>this.handleOnSumbit(event)}>
+            <label>Your name</label>
+            <input type="text" value={this.state.name}  onChange={(event)=>this.handleOnChangeInput(event)}/>
+            <label>Your age: </label>
+            <input type="text" value={this.state.age}  onChange={(event)=>this.handleOnChangeAge(event)}/>
+                <button onClick={(event)=>{}}>
+                    submit
+                </button>
+                </form>
             </>
                
       

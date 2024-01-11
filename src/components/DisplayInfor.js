@@ -53,6 +53,7 @@
                             <div key={user.id} className={+user.age>18?'green':'red'}>
                             <div>Name: {user.name}</div>
                             <div>age: {user.age}</div>
+                            <button onClick={(event)=>this.props.handleDeleteUser(user)} >delete</button>
                             <hr></hr>
                             </div>
                             

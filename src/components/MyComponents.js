@@ -1,5 +1,5 @@
 import React from 'react';
-import AddUserInfor from './AddUserInfor'
+import AddUserInfor from './AddUserInfor';
 import DisplayInfor from './DisplayInfor';
 
 
@@ -16,13 +16,24 @@ class MyComponent extends React.Component {
         ]
     }
     handleAddNewUser = (objectUser)=>{
-        let listUsersClone = [...this.state.listUsers];
+        // let listUsersClone = [...this.state.listUsers];
         
-        // console.log(objectUser);
-        // this.setState({
-        //     listUsers:[objectUser,...this.state.listUsers]
+     
+        this.setState({
+            listUsers:[objectUser,...this.state.listUsers]
 
-        // })
+        })
+    };
+    handleDeleteUser = (objectUSer)=>{
+        console.log(objectUSer);
+        let listUsersClone=this.state.listUsers;
+       let listChanged= listUsersClone.filter((user)=>{
+          
+            return user.id!=objectUSer.id;
+        });
+        this.setState({
+            listUsers:listChanged
+        })
     };
 
     //JSX
@@ -39,7 +50,7 @@ class MyComponent extends React.Component {
 
         <AddUserInfor handleAddNewUser={this.handleAddNewUser}/>
         <br></br>
-        <DisplayInfor listUsers={this.state.listUsers}></DisplayInfor>
+        <DisplayInfor listUsers={this.state.listUsers} handleDeleteUser={this.handleDeleteUser}></DisplayInfor>
         <hr/>
         
         </div>
