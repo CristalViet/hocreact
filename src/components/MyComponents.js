@@ -28,8 +28,12 @@ class MyComponent extends React.Component {
     //JSX
     render(){
         //Dry
+        const test={name:'viet',age:45};
+
         return(
             <>  
+            {JSON.stringify(test)}
+            <br></br>
          <div className='a'>
         
 
