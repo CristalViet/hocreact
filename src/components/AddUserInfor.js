@@ -41,19 +41,21 @@ class AddUserInfor extends React.Component{
     }
     render(){
         return(
-            <div>
-                My name is {this.state.name} and I'm {this.state.age}
+            <>
+             My name is {this.state.name} and I'm {this.state.age}
 
-                <form onSubmit={(event)=>this.handleOnSumbit(event)}>
-                <label>Your name</label>
-                <input type="text" value={this.state.name}  onChange={(event)=>this.handleOnChangeInput(event)}/>
-                <label>Your age: </label>
-                <input type="text" value={this.state.age}  onChange={(event)=>this.handleOnChangeAge(event)}/>
-                    <button>
-                        submit
-                    </button>
-                    </form>
-            </div>
+<form onSubmit={(event)=>this.handleOnSumbit(event)}>
+<label>Your name</label>
+<input type="text" value={this.state.name}  onChange={(event)=>this.handleOnChangeInput(event)}/>
+<label>Your age: </label>
+<input type="text" value={this.state.age}  onChange={(event)=>this.handleOnChangeAge(event)}/>
+    <button>
+        submit
+    </button>
+    </form>
+            </>
+               
+      
       
         );
     }
