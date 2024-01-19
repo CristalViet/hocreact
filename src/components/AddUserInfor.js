@@ -49,7 +49,7 @@ class AddUserInfor extends React.Component{
             <input type="text" value={this.state.name}  onChange={(event)=>this.handleOnChangeInput(event)}/>
             <label>Your age: </label>
             <input type="text" value={this.state.age}  onChange={(event)=>this.handleOnChangeAge(event)}/>
-                <button onClick={(event)=>{}}>
+                <button onClick={(event)=>{this.props.handleDelete()}}>
                     submit
                 </button>
                 </form>
